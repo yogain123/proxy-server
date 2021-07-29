@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nodemon":"NODE_TLS_REJECT_UNAUTHORIZED='0' && nodemon",
+    "start":"NODE_TLS_REJECT_UNAUTHORIZED='0' && node index.js"
   },
   "keywords": [],
   "author": "",
