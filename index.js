@@ -16,7 +16,7 @@ app.use(async (req, res) => {
     });
     res.json(await response.json());
   } catch (error) {
-    console.log({ error });
+    res.json({ error });
   }
 });
 
