@@ -14,7 +14,10 @@ app.use(async (req, res) => {
     const response = await fetch(url, {
       method: req.method,
       headers: req.headers,
-      body: JSON.stringify(req.body),
+      body:
+        req.method === "GET" || req.method === "DELETE"
+          ? undefined
+          : JSON.stringify(req.body),
     });
     res.json(await response.json());
   } catch (error) {
